@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
+$black: #000;
+$black2: #080808;
+$shadow: #1b1b1b;
+$green: #20C20E;
+$greenneon: #20fa32;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tektur';
+    & ::selection{
+        background: #0000;
+    }
+}
+
+body {
+    background: $black;
+}
+
+.container {
+    color: $green;
+    text-shadow: 0 0 18px $greenneon;
+    position: relative;
+    cursor: default;
+    width: 100%;
+    .display-time {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 80%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $black2;
+        width: 35vw;
+        height: 38vh;
+        border-radius: 17px;
+        gap: 1px;
+        header h3{
+            letter-spacing: .7pt;
+            font-size: 39px;
+            margin: 10px 0 23px;
+        }
+        #am-pm{
+            position: absolute;
+            right: 17%;
+            top: 54%;
+        }
+        .box-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .colon{
+                margin: auto;
+                font-size: 35px;
+            }
+            .box {
+                display: inherit;
+                align-items: center;
+                justify-content: center;
+                margin: auto 8pt;
+                width: 70px;
+                height: 70px;
+                border-radius: 6px;
+                p {
+                    font-weight: bold;
+                    font-size: 39px;
+                    text-align: center;
+                    margin: 3pt;
+                }
+            }
+        }
+    }
+}
